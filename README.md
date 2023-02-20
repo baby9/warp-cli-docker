@@ -1,13 +1,10 @@
-[![docker-ci](https://github.com/SCys/cloudflare_warp_proxy_docker/actions/workflows/docker-ci.yml/badge.svg)](https://github.com/SCys/cloudflare_warp_proxy_docker/actions/workflows/docker-ci.yml)
-![Docker Pulls](https://img.shields.io/docker/pulls/scys/warp-proxy)
-![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/scys/warp-proxy)
 
-Docker image to run Cloudflare Warp in proxy mode. Image is rebuilt and updated every day.
+Docker image to run Cloudflare Warp in proxy mode.
 
 ## Usage
 
 ```
-docker run -d -p 40000:40000 -e LICENSE="" --restart always zenexas/warp-cli:latest
+docker run -d -p 40000:40000 -e LICENSE="" --restart=unless-stopped zenexas/warp-cli:latest
 ```
 
 Input your WARP PLUS LICENSE key
