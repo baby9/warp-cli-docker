@@ -6,15 +6,15 @@ Docker image to run Cloudflare Warp in proxy mode.
 ```
 docker run -d -p 40000:40000 -e LICENSE="" --restart=unless-stopped zenexas/warp-cli:latest
 ```
-Input your warp plus LICENSE key
+Upgrade to warp plus if you have `LICENSE` key
 
 HTTP & SOCKS5 proxy server will be listening at port 40000.
 <br/><br/>
 #### RUN :
 ```
-curl -s4m8 -x socks5://127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
+curl -x socks5://127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
-Test your warp account type
+Print your warp account type
 <br/><br/>
 ````
 curl -s -x http://127.0.0.1:40000 https://ipinfo.io

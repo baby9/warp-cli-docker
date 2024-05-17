@@ -18,8 +18,6 @@
     
     # socat is used to redirect traffic from 40000 to 40001
     socat TCP-LISTEN:40000,fork TCP:localhost:40001 &
-    socat UDP-LISTEN:40000,fork UDP:localhost:40001 &
 ) &
 
 exec warp-svc
-warp-cli enable-always-on
