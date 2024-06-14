@@ -12,7 +12,7 @@ HTTP & SOCKS5 proxy server will be listening at port 40000.
 <br/><br/>
 #### RUN :
 ```
-curl -x socks5://127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
+curl -sx socks5://127.0.0.1:40000 https://www.cloudflare.com/cdn-cgi/trace | grep warp
 ```
 Print your warp account type
 <br/><br/>
