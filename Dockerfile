@@ -2,7 +2,7 @@ ARG DEBIAN_RELEASE=bullseye
 FROM docker.io/debian:$DEBIAN_RELEASE-slim
 ARG DEBIAN_RELEASE
 COPY entrypoint.sh /
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 RUN true && \
     apt update && \
     apt install -y gnupg ca-certificates curl socat && \
